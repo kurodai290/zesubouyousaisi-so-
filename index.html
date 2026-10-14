@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEESAW CHALLENGE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar" aria-label="ゲーム情報">
+      <div class="stat"><span class="label">STEP</span><strong id="step">1/8</strong></div>
+      <div class="stat lives-stat"><span class="label">LIVES</span><strong id="lives" aria-label="残りライフ">● ●</strong></div>
+      <div class="stat"><span class="label">SCORE</span><strong id="score">000/100</strong></div>
+      <div class="stat timer-stat"><span class="label">TIMER</span><strong id="timer">120.00</strong></div>
+    </header>
+
+    <section class="game-wrap">
+      <canvas id="game" width="960" height="540" aria-label="シーソーゲーム画面"></canvas>
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <p class="eyebrow">SEESAW CHALLENGE</p>
+          <h1 id="overlay-title">シーソーゲーム</h1>
+          <p id="overlay-text">左右の矢印キーで足場を傾け、ボールをゴールへ運ぼう。</p>
+          <button id="main-button">ゲームスタート</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <div class="key-hint"><kbd>←</kbd><kbd>→</kbd><span>足場を傾ける</span></div>
+      <p id="stage-note">STAGE 1：上の2段の足場が動く</p>
+      <button id="restart-button" class="small-button">ステージやり直し</button>
+    </footer>
+    <p class="disclaimer">試作品：STAGE 4〜8の仕掛けは動画を参考にした仮実装です。</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
